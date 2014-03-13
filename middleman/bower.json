@@ -1,0 +1,28 @@
+{
+  "name": "middleman-cordova-ionic",
+  "version": "0.0.1",
+  "authors": [
+    "Toyoaki Oko <chariderpato@gmail.com>"
+  ],
+  "description": "Middleman template for Cordova 3.x.x",
+  "main": "index.html",
+  "keywords": [
+    "Middleman",
+    "Cordova",
+    "Ionic"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/pixelsonly/middleman-cordova",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ionic": "latest",
+    "angular-mocks": "1.2.10",
+    "angular-resource": "latest"
+  }
+}

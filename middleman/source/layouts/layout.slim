@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    title SampleApp
+    = stylesheet_link_tag 'application', media: :all
+    - if build?
+      script src="cordova.js"
+    = javascript_include_tag 'application'
+  body ng-app="SampleApp"
+    ion-nav-bar animation="nav-title-slide-ios7" type="bar-assertive" back-button-type="button-icon" back-button-icon="ion-arrow-left-c"
+    ion-nav-view animation="slide-left-right"
