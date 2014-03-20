@@ -1,7 +1,10 @@
+#= require jquery/jquery
 #= require angular/angular
 #= require angular-animate/angular-animate
 #= require angular-sanitize/angular-sanitize
 #= require angular-resource/angular-resource
+#= require angular-cookies/angular-cookies
+#= require angularLocalStorage/src/angularLocalStorage
 #= require angular-ui-router/release/angular-ui-router
 #= require ionic/release/js/ionic
 #= require ionic/release/js/ionic-angular
