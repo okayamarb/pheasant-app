@@ -24,7 +24,6 @@
     "ionic": "latest",
     "angular-mocks": "1.2.10",
     "angular-resource": "latest",
-    "angularLocalStorage": "latest",
-    "jquery": "1.10"
+    "angularLocalStorage": "latest"
   }
 }
