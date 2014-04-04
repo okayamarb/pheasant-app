@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "ionic": "latest",
+    "ionic": "master",
     "angular-mocks": "1.2.10",
     "angular-resource": "latest",
     "angularLocalStorage": "latest"

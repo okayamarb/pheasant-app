@@ -1,7 +1,6 @@
 {
   "name": "ionic",
-  "version": "0.9.27",
-  "codename": "salamander",
+  "codename": "actinium",
   "homepage": "https://github.com/driftyco/ionic",
   "authors": [
     "Max Lynch <max@drifty.com>",
@@ -53,13 +52,13 @@
     "angular-sanitize": "1.2.12",
     "angular-ui-router": "0.2.7"
   },
-  "_release": "0.9.27",
+  "_release": "8a12f2d16c",
   "_resolution": {
-    "type": "version",
-    "tag": "v0.9.27",
-    "commit": "da0c24672f322bf14232adb43c70f5593e85d0a6"
+    "type": "branch",
+    "branch": "master",
+    "commit": "8a12f2d16c591199400ecbb478d5b047d6b46284"
   },
   "_source": "git://github.com/driftyco/ionic.git",
-  "_target": "*",
+  "_target": "master",
   "_originalSource": "ionic"
 }

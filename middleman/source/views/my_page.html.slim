@@ -1,12 +1,21 @@
-ion-view title="MyPage" hide-back-button="true" left-buttons="tapLeftButton" right-buttons="tapRightButton"
-  ion-content has-header="true" id="MyPageCtrl"
-    p ログインできました。
-    .row
-      .col
-        a ng-href="#/topics" 掲示板
-      .col
-        a ng-href="#/schedules" 予定
-      .col
-        a ng-href="#/notices" お知らせ
-      .col
-        a ng-href="#/todos" ToDo
+/ion-view title="MyPage" hide-back-button="true" left-buttons="tapLeftButton" right-buttons="tapRightButton"
+ion-header-bar class="bar-balanced" align-title="center"
+  div class="buttons"
+    button class="button button-icon icon ion-navicon-round" ng-click="tapLeftButton()"
+  h1 class="title" Pheasant
+ion-content has-header="true" id="MyPageCtrl"
+  p ログインできました。
+  .row
+    .col
+      a ng-href="#/topics" 掲示板
+    .col
+      a ng-href="#/schedules" 予定
+    .col
+      a ng-href="#/notices" お知らせ
+    .col
+      a ng-href="#/todos" ToDo
+  .row
+    .col ng-show="isAdmin()"
+      a ng-href="#/users" ユーザ管理
+    .col ng-show="isAdmin()"
+      a ng-href="#/roles" 権限管理

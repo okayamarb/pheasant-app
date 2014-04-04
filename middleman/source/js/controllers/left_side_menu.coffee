@@ -6,9 +6,9 @@ controllers.controller 'LeftSideMenuCtrl', ($scope, $http, $location, storage)->
       "#{$scope.settings.url}/tokens?token=#{$scope.token}"
     ).success((data) ->
       $scope.token = null
-      $location.path('app/sign_in').replace()
+      $location.path('#/sign_in').replace()
     ).error((data) ->
       alert(data.message)
       $scope.token = null
-      $location.path('app/sign_in').replace()
+      $location.path('#/sign_in').replace()
     )

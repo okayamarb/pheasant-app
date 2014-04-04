@@ -43,6 +43,8 @@ use Rack::Cors do
     origins '*'
     resource '*',
              headers: :any,
-             methods: [:get, :post, :put, :patch, :delete, :options]
+             methods: [:get, :post, :put, :patch, :delete, :options],
+             credentials: true,
+             max_age: 86400
   end
 end

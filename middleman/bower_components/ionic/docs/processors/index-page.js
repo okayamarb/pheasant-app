@@ -18,7 +18,7 @@ module.exports = {
       id: 'index-page',
       currentVersion: currentVersion,
       template: 'index.template.html',
-      outputPath: contentsFolder + '/index.md'
+      outputPath: contentsFolder + '/api/index.md'
     });
   }
 };

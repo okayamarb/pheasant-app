@@ -1,19 +1,27 @@
-controllers.controller 'MyPageCtrl', ($scope, $rootScope, $location, $http, storage) ->
-  $rootScope.token = storage.get("token")
-  if ($rootScope.token)
-    $scope.tapLeftButton = [{
-      type: 'button button-clear',
-      content: '<i class="icon ion-navicon-round"></i>',
-      tap: (e) ->
-        $scope.sideMenuController.toggleLeft()
-        console.log 'Tap left button!'
-    }]
-#    $scope.tapRightButton = [{
-#      type: 'button button-clear',
-#      content: '<i class="icon ion-settings"></i>',
-#      tap: (e) ->
-#        console.log 'Tap right button!'
-#    }]
-  else
+controllers.controller 'MyPageCtrl', ($scope, $rootScope, $location, $http, $state, storage) ->
+  $scope.token = storage.get("token")
+
+  $scope.removeToken = ->
     storage.remove('token')
     $location.path('/').replace()
+
+  if ($scope.token)
+    $scope.tapLeftButton = (e) ->
+      $scope.logout()
+
+    $scope.isAdmin = ->
+      true
+  else
+    $scope.removeToken()
+
+  $scope.logout = ->
+    storage.bind($scope, 'settings', {defaultValue: {url: 'http://localhost:3000'}})
+    $http.delete(
+      "#{$scope.settings.url}/tokens?token=#{$scope.token}"
+    ).success((data) ->
+      $scope.removeToken()
+    ).error((data) ->
+      alert(data.message)
+      $scope.removeToken()
+    )
+
